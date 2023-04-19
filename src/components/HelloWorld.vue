@@ -46,6 +46,7 @@ export default {
         { text: 'Blue timesheet.xlsx', value: 'https://minio.cnbabylon.com/public/luckysheet/Blue%20timesheet.xlsx' },
         { text: 'Student calendar (Mon).xlsx', value: 'https://minio.cnbabylon.com/public/luckysheet/Student%20calendar%20%28Mon%29.xlsx' },
         { text: 'Blue mileage and expense report.xlsx', value: 'https://minio.cnbabylon.com/public/luckysheet/Blue%20mileage%20and%20expense%20report.xlsx' },
+        { text: 'Form open connnect.xlsx', value: 'http://171.244.60.95:9000/ti%E1%BA%BFng%20vi%E1%BB%87t%203/Form_Open_Connect.xlsx' },
       ],
       isMaskShow: false,
     }
@@ -146,7 +147,6 @@ export default {
                 return;
             }
             window.luckysheet.destroy();
-            
             window.luckysheet.create({
                 container: 'luckysheet', //luckysheet is the container id
                 showinfobar:false,
@@ -174,7 +174,7 @@ export default {
             
             this.isMaskShow = false;
             window.luckysheet.destroy();
-            
+            debugger
             window.luckysheet.create({
                 container: 'luckysheet', //luckysheet is the container id
                 showinfobar:false,
@@ -202,6 +202,12 @@ export default {
           elemIF.src = value;
     }
 
+  },
+  updated(){
+    this.data
+  },
+  props: {
+    data: ""
   }
 }
 </script>
